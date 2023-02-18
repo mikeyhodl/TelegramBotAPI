@@ -6,10 +6,18 @@
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -31,11 +40,11 @@ if(savedDarkMode === true){
             </a>
     </div>
     <div>
-    </div>
+5.2.0    </div>
     <div class="pull-right d-flex">
-            <div class="filter-section" id="filter-section">
-                    <button class="platform-tag platform-selector js-like" data-active="" data-filter=":docs:dokkaHtml/jsMain">js</button>
-            </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":docs:dokkaHtml/jsMain">js</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,12 +55,12 @@ if(savedDarkMode === true){
     </div>
     <div id="main">
 <div class="main-content" id="content" pageIds="docs::dev.inmo.tgbotapi.webapps/MainButton///PointingToDeclaration//-1203563889">
-  <div class="breadcrumbs"><a href="../../../index.html">docs</a><span class="delimiter">/</span><a href="../index.html">dev.inmo.tgbotapi.webapps</a><span class="delimiter">/</span><a href="index.html">MainButton</a></div>
+  <div class="breadcrumbs"><a href="../../../index.html">docs</a><span class="delimiter">/</span><a href="../index.html">dev.inmo.tgbotapi.webapps</a><span class="delimiter">/</span><span class="current">MainButton</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Main</span><wbr></wbr><span><span>Button</span></span></h1>
     <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword">external </span><span class="token keyword">class </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword">external </span><span class="token keyword">class </span><a href="index.html">MainButton</a></div></div>    </div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button></div>
@@ -68,8 +77,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-main-button.html"><span class="token function">MainButton</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-main-button.html"><span class="token function">MainButton</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                </div>
               </div>
             </div>
           </div>
@@ -87,8 +96,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="disable.html"><span class="token function">disable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="disable.html"><span class="token function">disable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -104,8 +113,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="enable.html"><span class="token function">enable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="enable.html"><span class="token function">enable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -121,8 +130,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="hide.html"><span class="token function">hide</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="hide.html"><span class="token function">hide</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -138,8 +147,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="hide-progress.html"><span class="token function">hideProgress</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="hide-progress.html"><span class="token function">hideProgress</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -155,8 +164,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-text.html"><span class="token function">setText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-text.html"><span class="token function">setText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -172,8 +181,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="show.html"><span class="token function">show</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="show.html"><span class="token function">show</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -189,8 +198,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="show-progress.html"><span class="token function">showProgress</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">leaveActive<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>definedExternally</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="show-progress.html"><span class="token function">showProgress</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">leaveActive<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>definedExternally</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -201,15 +210,15 @@ if(savedDarkMode === true){
         <div class="table-row" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="color.html">color</a></div>
+                <div><a href="color.html"><span><span>color</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1363397381%2FProperties%2F-1203563889"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-1363397381%2FProperties%2F-1203563889" anchor-label="color" id="-1363397381%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="color.html">color</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-1363397381%2FProperties%2F-1203563889" anchor-label="color" id="-1363397381%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="color.html">color</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -218,15 +227,15 @@ if(savedDarkMode === true){
         <div class="table-row" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="is-active.html">isActive</a></div>
+                <div><a href="is-active.html"><span>is</span><wbr></wbr><span><span>Active</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1133424140%2FProperties%2F-1203563889"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="1133424140%2FProperties%2F-1203563889" anchor-label="isActive" id="1133424140%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-active.html">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="1133424140%2FProperties%2F-1203563889" anchor-label="isActive" id="1133424140%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-active.html">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -235,15 +244,15 @@ if(savedDarkMode === true){
         <div class="table-row" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="is-progress-visible.html">isProgressVisible</a></div>
+                <div><a href="is-progress-visible.html"><span>is</span><wbr></wbr><span>Progress</span><wbr></wbr><span><span>Visible</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1797614307%2FProperties%2F-1203563889"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="1797614307%2FProperties%2F-1203563889" anchor-label="isProgressVisible" id="1797614307%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-progress-visible.html">isProgressVisible</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="1797614307%2FProperties%2F-1203563889" anchor-label="isProgressVisible" id="1797614307%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-progress-visible.html">isProgressVisible</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -252,15 +261,15 @@ if(savedDarkMode === true){
         <div class="table-row" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="is-visible.html">isVisible</a></div>
+                <div><a href="is-visible.html"><span>is</span><wbr></wbr><span><span>Visible</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-614476906%2FProperties%2F-1203563889"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-614476906%2FProperties%2F-1203563889" anchor-label="isVisible" id="-614476906%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-visible.html">isVisible</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-614476906%2FProperties%2F-1203563889" anchor-label="isVisible" id="-614476906%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-visible.html">isVisible</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -269,15 +278,15 @@ if(savedDarkMode === true){
         <div class="table-row" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="text.html">text</a></div>
+                <div><a href="text.html"><span><span>text</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1085672497%2FProperties%2F-1203563889"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-1085672497%2FProperties%2F-1203563889" anchor-label="text" id="-1085672497%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="text.html">text</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-1085672497%2FProperties%2F-1203563889" anchor-label="text" id="-1085672497%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="text.html">text</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -286,15 +295,15 @@ if(savedDarkMode === true){
         <div class="table-row" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="text-color.html">textColor</a></div>
+                <div><a href="text-color.html"><span>text</span><wbr></wbr><span><span>Color</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1711279864%2FProperties%2F-1203563889"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-1711279864%2FProperties%2F-1203563889" anchor-label="textColor" id="-1711279864%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="text-color.html">textColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><a data-name="-1711279864%2FProperties%2F-1203563889" anchor-label="textColor" id="-1711279864%2FProperties%2F-1203563889" data-filterable-set=":docs:dokkaHtml/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="text-color.html">textColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -312,8 +321,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">MainButton</a><span class="token punctuation">.</span><a href="../on-click.html"><span class="token function">onClick</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventHandler<span class="token operator">: </span><a href="../index.html#1691625054%2FClasslikes%2F-1203563889">EventHandler</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">MainButton</a><span class="token punctuation">.</span><a href="../on-click.html"><span class="token function">onClick</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventHandler<span class="token operator">: </span><a href="../index.html#1691625054%2FClasslikes%2F-1203563889">EventHandler</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -329,8 +338,8 @@ if(savedDarkMode === true){
             <div>
               <div class="title">
                 <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">MainButton</a><span class="token punctuation">.</span><a href="../set-params.html"><span class="token function">setParams</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">params<span class="token operator">: </span><a href="../-main-button-params/index.html">MainButtonParams</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":docs:dokkaHtml/jsMain" data-filterable-set=":docs:dokkaHtml/jsMain" data-active="" data-toggle=":docs:dokkaHtml/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">MainButton</a><span class="token punctuation">.</span><a href="../set-params.html"><span class="token function">setParams</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">params<span class="token operator">: </span><a href="../-main-button-params/index.html">MainButtonParams</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MainButton</a></div></div>                </div>
               </div>
             </div>
           </div>
@@ -339,10 +348,11 @@ if(savedDarkMode === true){
     </div>
   </div>
 </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-        </div>
+      </div>
     </div>
 </div>
 </body>
